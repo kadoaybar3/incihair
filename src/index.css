@@ -1,0 +1,151 @@
+:root {
+  --cream: #ffffff;
+  --sand: #f3f5e8;
+  --sand-deep: #94c01f;
+  --green: #94c01f;
+  --green-deep: #171a35;
+  --blue: #94c01f;
+  --charcoal: #292a3d;
+  --muted: #686a78;
+  --line: #e7e8e2;
+  --container: 1120px;
+
+  font-family: 'Noto Sans', 'Outfit', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background: var(--cream);
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+footer[id],
+.service[id] {
+  scroll-margin-top: 184px;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--green-deep);
+  font-family: 'Figtree', 'Noto Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--sand);
+  color: var(--green-deep);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 50;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: var(--green);
+  color: var(--cream);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 48px);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn--primary {
+  background: var(--green);
+  color: var(--cream);
+}
+
+.btn--primary:hover {
+  background: var(--green-deep);
+}
+
+.btn--ghost {
+  border-color: var(--sand-deep);
+  color: var(--green-deep);
+}
+
+.btn--ghost:hover {
+  border-color: var(--green);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,9 @@
+.floating-whatsapp{display:none}
+@media(max-width:780px){
+  .floating-whatsapp{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;display:inline-flex;min-height:54px;align-items:center;justify-content:center;gap:10px;padding:0 20px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#20a86b;box-shadow:0 8px 26px rgba(11,80,52,.3);color:#fff;font-size:14px;font-weight:650;text-decoration:none;transition:background-color .2s,transform .2s}
+  .floating-whatsapp:hover{transform:translateY(-2px);background:#168f59}
+  .floating-whatsapp svg{width:20px;height:20px;stroke-width:2}
+  .footer__bottom{padding-bottom:88px}
+}
+@media(prefers-reduced-motion:reduce){.floating-whatsapp{transition:none}}
+@media(max-width:420px){.floating-whatsapp{right:4px;bottom:calc(12px + env(safe-area-inset-bottom));width:44px;min-height:44px;padding:0}.floating-whatsapp span{display:none}}
